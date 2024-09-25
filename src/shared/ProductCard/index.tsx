@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-interface ProductCard {
+ export interface ProductCard {
     id:string,
     title :string,
     image : string,

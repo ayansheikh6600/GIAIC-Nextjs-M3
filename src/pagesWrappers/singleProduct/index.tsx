@@ -1,5 +1,6 @@
 "use client"
 import { Card } from '@/shared';
+import { ProductCard } from '@/shared/ProductCard';
 import axios from 'axios';
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -7,7 +8,7 @@ import React, { useEffect, useState } from 'react'
 const SingleProduct = () => {
   const pathname = usePathname();
   const id = pathname.split("/").pop(); // Last part of the path ko extract karne ke liye
-  const [product, Setproduct] =  useState<any>()
+  const [product, Setproduct] =  useState<ProductCard>()
 
   // console.log(id, "Product ID");
 
