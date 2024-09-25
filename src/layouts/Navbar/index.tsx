@@ -33,17 +33,16 @@ const Navbar = () => {
       </div>
       <nav className="relative flex justify-center space-x-8 p-2 bg-black rounded-3xl">
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
 
           return (
-            <Link key={item.name} href={item.href} onClick={() => setSelectedCategory(item?.href)}>
-              <div className='relative '>
+            <Link key={item.name} href={item.href} onClick={() => setSelectedCategory(item?.href)} className='p-2 relative'>
+
                 
               <span
                 className={`relative z-10 px-4 py-6 font-medium hover:text-indigo-500 
                 ${selectedCategory === item?.href
-                      ? 'text-white'
-                      : 'text-gray-400'
+                      ? 'text-white hover:text-white'
+                      : 'text-gray-400 hover:text-indigo-500'
                   }
                 `}
               >
@@ -60,7 +59,7 @@ const Navbar = () => {
                   />
                 )}
 
-              </div>
+              
 
             </Link>
           );
