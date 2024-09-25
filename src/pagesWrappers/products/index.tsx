@@ -5,15 +5,15 @@ import React, { useEffect, useState } from 'react'
 
 const Products = () => {
 
-    const [test, setTest]= useState<any>()
+    const [test, setTest]= useState<[]|any>()
 
     useEffect(()=>{
 
         (async ()=>{
 
-            const res = await axios.get("https://fakestoreapi.com/products")
-            console.log(res.data);
-            setTest(res.data)
+            const res = await axios.get("/api/products")
+            // console.log(res.data.data);
+            setTest(res?.data?.data)
             
         })()
 

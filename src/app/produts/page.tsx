@@ -1,4 +1,5 @@
-import { Products } from '@/pages'
+
+import { Products } from '@/pagesWrappers'
 import React from 'react'
 
 const page = () => {
